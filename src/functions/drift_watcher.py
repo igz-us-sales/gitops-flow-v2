@@ -17,9 +17,8 @@ def format_issue(body, model_endpoint, model_uri_with_tag):
     
 
 def load_model_uri_with_tag(project, model_endpoint):
-    model_uri = model_endpoint.spec.model_uri
-    model_tag = model_uri.split(":")[-1]
-    return project.list_models(tag=model_tag)[0].uri
+    model_name, model_tag = model_endpoint.spec.model.split(":")
+    return project.list_models(name=model_name, tag=model_tag)[0].uri
 
 
 def trigger_retrain(repo, existing_model_path):
