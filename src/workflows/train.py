@@ -6,7 +6,7 @@ from kfp import dsl
 def pipeline(
     existing_model_path: str = "None",
     force_deploy: bool = False,
-    source_url: str = "store://feature-vectors/gitops-flow-2/heart-disease-vec",
+    source_url: str = "store://feature-vectors/gitops-flow-v2/heart-disease-vec",
     label_column: str = "target",
     post_github: bool = True
 ):
