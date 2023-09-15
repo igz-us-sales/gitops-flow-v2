@@ -46,7 +46,7 @@ def create_issue(context, models, comparison_metric):
 
     # Authenticate repo
     g = Github(login_or_token=mlrun.get_secret_or_env("MY_GITHUB_TOKEN"))
-    repo = g.get_organization("igz-us-sales").get_repo("mlrun-github-actions-demo")
+    repo = g.get_organization("igz-us-sales").get_repo("gitops-flow-v2")
 
     # Create issue
     repo.create_issue(f"Train Results - Run {context.uid}", body=body, assignee="nschenone")
