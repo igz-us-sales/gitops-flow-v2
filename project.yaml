@@ -1,7 +1,7 @@
 kind: project
 metadata:
   name: gitops-flow-v2
-  created: '2023-09-15T21:35:18.734000'
+  created: '2023-10-16T19:22:58.037000'
 spec:
   functions:
   - url: src/project_setup.py
@@ -54,10 +54,14 @@ spec:
   artifacts: []
   conda: ''
   source: v3io:///bigdata/gitops.zip
-  origin_url: git://github.com/igz-us-sales/mlrun-github-actions-demo.git#refs/heads/master
+  origin_url: git://github.com/igz-us-sales/gitops-flow-v2.git#refs/heads/master
   load_source_on_run: true
   desired_state: online
   owner: nick
   default_image: .mlrun/func-gitops-flow-v2-image-builder:latest
+  build:
+    commands: []
+    requirements: []
+  custom_packagers: []
 status:
   state: online
